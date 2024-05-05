@@ -48,7 +48,7 @@ It took me some time, where I could not get any exported model to run on the TPU
 ```shell 
 yolo export model=yolov8n.pt format=edgetpu
 ```
-Despite the format= edgetpu, this export function creates file names like this for instance:
+Despite the format=edgetpu, this export function creates file names like this for instance:
 ```shell
 yolov8n_integer_quant.tflite
 ```
@@ -57,7 +57,7 @@ But this will never be directed to the TPU. To run it on the TPU, it has to have
 yolov8n_integer_quant_edgetpu.tflite
 ```
 So, you'll have to rename all exported files or make a copy to that name to compare both.
-I tried to follow this article and also installed the  <a href="https://github.com/DAVIDNYARKO123/edge-tpu-silva">edge_tpu_silva</a>-version in a python 3.9 venv for comparison. Overall, both installation test results were the same and disappointing. There is a speed increase from *.pt models to *.tflite models through the optimization, but no difference between CPU and TPU execution. For 640 size the TPU execution even exceeded the CPU time.
+I tried to follow the Ultralytics article and in addition installed the  <a href="https://github.com/DAVIDNYARKO123/edge-tpu-silva">edge_tpu_silva</a>-version in a python 3.9 venv for comparison. Overall, both installation test results were the same and disappointing. There is a speed increase from *.pt models to *.tflite models through the optimization, but no difference between CPU and TPU execution. For 640 size the TPU execution even exceeded the CPU time.
 <br>
 |Image Size|Model|RPi5-CPU/TPU|RPi5-Execution|Jetson Nano Execution|
 |:--------:|----:|:----------:|:------------:|:-------------------:|
