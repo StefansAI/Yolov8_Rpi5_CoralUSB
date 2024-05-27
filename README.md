@@ -1,5 +1,5 @@
 # Yolov8_Rpi5_CoralUSB
-Install and Test of Yolov8 on Raspberry Pi5 with USB Coral TPU
+## Install and Test of Yolov8 on Raspberry Pi5 (no TPU)
 
 <br>
 <div style="text-align: center;">
@@ -8,7 +8,8 @@ Install and Test of Yolov8 on Raspberry Pi5 with USB Coral TPU
 <br>
 
 <br>
-To just install yolov8 on Raspberry Pi5 with TPU simply type:
+
+To just install yolov8 on Raspberry Pi5 without TPU simply type:
 
 ```shell
 sudo apt-get update
@@ -19,7 +20,7 @@ source yolo_env/bin/activate
 pip3 install ultralytics
 ```
 <br>
-There is also a shell scrip available for download, which includes the same lines above and the additional download of the GardenCam vodeos and models plus test runs: 
+There is also a shell scrip available for download, which includes the same lines above and the additional download of the GardenCam videos and models plus test runs: 
 
 ```shell
 wget https://github.com/StefansAI/Yolov8_Rpi5_CoralUSB/raw/main/scripts/yolov8_install.sh
@@ -29,7 +30,9 @@ chmod +x yolov8_install.sh
 <br>
 
 <br>
-============================================================================
+=====================================================================================
+
+## Install and Test of Yolov8 on Raspberry Pi5 with USB Coral TPU
 <br>
 
 <br>
