@@ -5,6 +5,7 @@ for fname in sorted(os.listdir()):
 	if fname.startswith("run_") and fname.endswith(".txt"):
 		sum = 0
 		cnt = 0
+		avg = 0
 		with open(fname) as csvfile:
 			reader = csv.reader(csvfile, delimiter=',', quoting=csv.QUOTE_NONE)
 			for row in reader:
@@ -14,5 +15,7 @@ for fname in sorted(os.listdir()):
 					sum = sum + x
 					cnt = cnt + 1
 
-		avg = sum/cnt
+		if cnt > 0:
+			avg = sum/cnt
+
 		print("File= %s count= %d average= %.1f ms"%(fname,cnt,avg))
