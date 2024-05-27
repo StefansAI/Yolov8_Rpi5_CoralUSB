@@ -42,7 +42,7 @@ chmod +x yolov8_install.sh
 To run the Coral TPU with the Raspberry Pi 5 I had to research a lot, since nothing was straight forward. One reason is, that Google stopped supporting their software support for their TPU long time ago. But Python has evolved and the old Google installations don't work anymore. 
 <br>
 I mainly followed this article: <a href="https://docs.ultralytics.com/guides/coral-edge-tpu-on-raspberry-pi/">Coral Edge TPU on a Raspberry Pi with Ultralytics YOLOv8</a>, but also <a href="https://github.com/JungLearnBot/RPi5_yolov8/blob/main/Readme.RPi5.coral_tpu.picam.qt.md">JungLearnBot/RPi5_yolov8/Coral_TPU</a> and of course <a href="https://coral.ai/docs/accelerator/get-started/">Get started with the USB Accelerator</a>.<br>
-In addition I tried to follow the Ultralytics article and in addition installed the  <a href="https://github.com/DAVIDNYARKO123/edge-tpu-silva">edge_tpu_silva</a>-version in a python 3.9 venv for comparison.
+In addition I installed the  <a href="https://github.com/DAVIDNYARKO123/edge-tpu-silva">edge_tpu_silva</a>-version in a python 3.9 venv for comparison.
 <br>
 
 It took me some time, where I could not get any exported model to run on the TPU at all. Finally, after some debugging, I had to find out, that there is an implicit name convention. Here is the yolo export as recommended: 
